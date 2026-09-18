@@ -1,0 +1,244 @@
+<h2 class="sr-only">
+  Maquette d'un tableau de bord SIG montrant les débarcadères de la côte
+  camerounaise avec la densité de captures par site, un panneau de filtres et
+  des indicateurs clés
+</h2>
+<div style="display: grid; grid-template-columns: 200px 1fr; gap: 16px">
+  <div
+    style="
+      background: var(--surface-1);
+      border-radius: var(--radius);
+      padding: 1rem;
+    "
+  >
+    <p
+      style="
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0 0 12px;
+        color: var(--text-primary);
+      "
+    >
+      Filtres
+    </p>
+
+    <label
+      style="
+        font-size: 12px;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+      "
+      >Période</label
+    >
+    <select style="width: 100%; margin-bottom: 12px">
+      <option>30 derniers jours</option>
+      <option>Ce trimestre</option>
+      <option>Année en cours</option>
+    </select>
+
+    <label
+      style="
+        font-size: 12px;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+      "
+      >Espèce</label
+    >
+    <select style="width: 100%; margin-bottom: 12px">
+      <option>Toutes espèces</option>
+      <option>Bar / thiof</option>
+      <option>Crevette</option>
+      <option>Machoiron</option>
+    </select>
+
+    <label
+      style="
+        font-size: 12px;
+        color: var(--text-secondary);
+        display: block;
+        margin-bottom: 4px;
+      "
+      >Débarcadère</label
+    >
+    <select style="width: 100%">
+      <option>Tous les sites</option>
+      <option>Kribi</option>
+      <option>Campo</option>
+      <option>Limbe</option>
+      <option>Douala</option>
+    </select>
+
+    <div
+      style="border-top: 0.5px solid var(--border); margin: 16px 0 12px"
+    ></div>
+
+    <p
+      style="
+        font-size: 12px;
+        font-weight: 500;
+        margin: 0 0 8px;
+        color: var(--text-primary);
+      "
+    >
+      Légende
+    </p>
+    <div
+      style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px"
+    >
+      <span
+        style="
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--fill-accent);
+          display: inline-block;
+        "
+      ></span>
+      <span style="font-size: 12px; color: var(--text-secondary)"
+        >Faible densité</span
+      >
+    </div>
+    <div style="display: flex; align-items: center; gap: 6px">
+      <span
+        style="
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: var(--fill-accent);
+          display: inline-block;
+        "
+      ></span>
+      <span style="font-size: 12px; color: var(--text-secondary)"
+        >Forte densité</span
+      >
+    </div>
+  </div>
+
+  <div>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 12px;
+      "
+    >
+      <div
+        style="
+          background: var(--surface-1);
+          border-radius: var(--radius);
+          padding: 1rem;
+        "
+      >
+        <p
+          style="font-size: 13px; color: var(--text-secondary); margin: 0 0 4px"
+        >
+          Prises enregistrées
+        </p>
+        <p style="font-size: 24px; font-weight: 500; margin: 0">1 284</p>
+      </div>
+      <div
+        style="
+          background: var(--surface-1);
+          border-radius: var(--radius);
+          padding: 1rem;
+        "
+      >
+        <p
+          style="font-size: 13px; color: var(--text-secondary); margin: 0 0 4px"
+        >
+          Débarcadères actifs
+        </p>
+        <p style="font-size: 24px; font-weight: 500; margin: 0">7</p>
+      </div>
+      <div
+        style="
+          background: var(--surface-1);
+          border-radius: var(--radius);
+          padding: 1rem;
+        "
+      >
+        <p
+          style="font-size: 13px; color: var(--text-secondary); margin: 0 0 4px"
+        >
+          Pêcheurs contributeurs
+        </p>
+        <p style="font-size: 24px; font-weight: 500; margin: 0">96</p>
+      </div>
+    </div>
+
+    <div
+      style="
+        background: var(--surface-2);
+        border: 0.5px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem;
+      "
+    >
+      <svg viewBox="0 0 460 380" style="width: 100%; height: auto" role="img">
+        <title>
+          Carte stylisée de la côte camerounaise avec densité de captures par
+          débarcadère
+        </title>
+        <desc>
+          Une forme représentant le littoral avec des cercles proportionnels
+          marquant Douala, Limbe, Kribi et Campo, colorés selon la densité des
+          captures enregistrées.
+        </desc>
+
+        <path
+          d="M 60 20 L 100 40 L 90 90 L 130 140 L 120 200 L 160 260 L 150 320 L 190 360 L 230 340 L 210 280 L 240 220 L 220 160 L 250 100 L 230 40 L 180 10 Z"
+          fill="var(--bg-success)"
+          stroke="var(--border)"
+          stroke-width="1"
+        />
+
+        <path
+          d="M 250 100 L 400 60 L 420 340 L 230 340 L 210 280 L 240 220 L 220 160 Z"
+          fill="var(--surface-1)"
+          stroke="none"
+        />
+
+        <circle cx="255" cy="95" r="4" fill="var(--text-muted)" />
+        <text x="263" y="99" font-size="11" fill="var(--text-secondary)">
+          Douala
+        </text>
+
+        <circle
+          cx="195"
+          cy="150"
+          r="14"
+          fill="var(--fill-accent)"
+          opacity="0.85"
+        />
+        <text x="213" y="153" font-size="11" fill="var(--text-secondary)">
+          Limbe
+        </text>
+
+        <circle cx="170" cy="250" r="22" fill="var(--fill-accent)" />
+        <text
+          x="195"
+          y="254"
+          font-size="12"
+          font-weight="500"
+          fill="var(--text-primary)"
+        >
+          Kribi
+        </text>
+
+        <circle
+          cx="180"
+          cy="320"
+          r="9"
+          fill="var(--fill-accent)"
+          opacity="0.6"
+        />
+        <text x="192" y="324" font-size="11" fill="var(--text-secondary)">
+          Campo
+        </text>
+      </svg>
+    </div>
+  </div>
+</div>
